@@ -40,7 +40,7 @@ SCENARIO 1: WHEN USER HASN’T SPECIFIED A NUMBER, 32 IS THE DEFAULT NUMBER
 GIVEN the user hasn’t specified the number of events, WHEN he/she opens the events page, THEN 32 events will be displayed by default.
 
 SCENARIO 2: USER CAN CHANGE THE NUMBER OF EVENTS THEY WANT TO SEE
-GIVEN the number of events displayed is 32, WHEN the user specifies a number, THEN that specified number of events will be displayed.
+GIVEN the number of events displayed by defaultis 32, WHEN the user types in a number, THEN that specified number of events will be displayed.
 
 ### FEATURE 4: USE THE APP WHEN OFFLINE
 
