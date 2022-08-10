@@ -17,18 +17,18 @@ describe('<Event />',()=>{
 
     test('expand event\'s details on button click', ()=>{
         EventWrapper.setState({
-            show:false
+            showDetails:false
           })
         EventWrapper.find('.expandDetails').simulate('click');
-        expect(EventWrapper.state('show')).toBe(true);
+        expect(EventWrapper.state('showDetails')).toBe(true);
     });
 
     test('collapse event\'s details on button click', ()=>{
         EventWrapper.setState({
-            show:true
+            showDetails:true
           })
         EventWrapper.find('.collapseDetails').simulate('click');
-        expect(EventWrapper.state('show')).toBe(false);
+        expect(EventWrapper.state('showDetails')).toBe(false);
     });
 
 })

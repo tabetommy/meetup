@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 
 
 class Event extends Component {
@@ -6,7 +7,7 @@ class Event extends Component {
           super();
           
           this.state = {
-               show:false
+               showDetails:false
           }
           }
   
@@ -14,11 +15,17 @@ class Event extends Component {
      const {events}=this.props
     return (
         <div>
-          <h1 className='eventTitle' >{events.title}</h1>
-          <p className='eventTimeCity' ></p>
-          <button className='expandDetails' onClick={()=>this.setState({show:true})}></button>
-          <button className='collapseDetails' onClick={()=>this.setState({show:false})}></button>
-          {/*display the details of the event if this.state.show is true*/}
+          <h1 className='eventTitle' >{events.summary}</h1>
+          <p className='eventTimeCity' >{moment(events.start.dateTime).format('LLLL') + events.start.timeZone}</p>
+          <p>{`@${events.summary}|${events.location}`}</p>
+          {!this.state.showDetails? <button className='expandDetails' onClick={()=>this.setState({showDetails:true})}>Show details</button>:<div></div>}
+          {this.state.showDetails?
+          <div>
+          <p>{events.description}</p>
+          <button className='collapseDetails' onClick={()=>this.setState({showDetails:false})}>Hide details</button>
+          </div>
+          :<p></p>  
+        }
         </div>
     );
   }
