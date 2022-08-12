@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/meetup/static/css/main.c0a4ba23.css",
-    "main.js": "/meetup/static/js/main.c22ce2cd.js",
+    "main.js": "/meetup/static/js/main.f5cd5f56.js",
     "static/js/787.32be2739.chunk.js": "/meetup/static/js/787.32be2739.chunk.js",
     "index.html": "/meetup/index.html",
     "main.c0a4ba23.css.map": "/meetup/static/css/main.c0a4ba23.css.map",
-    "main.c22ce2cd.js.map": "/meetup/static/js/main.c22ce2cd.js.map",
+    "main.f5cd5f56.js.map": "/meetup/static/js/main.f5cd5f56.js.map",
     "787.32be2739.chunk.js.map": "/meetup/static/js/787.32be2739.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c0a4ba23.css",
-    "static/js/main.c22ce2cd.js"
+    "static/js/main.f5cd5f56.js"
   ]
 }
