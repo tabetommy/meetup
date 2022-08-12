@@ -7,6 +7,9 @@ import NumberOfEvents from '../NumberOfEvents';
 import { mockData } from '../mock-data';
 import { extractLocations, getEvents} from '../api';
 
+
+/*unit test*/
+
 describe('<App /> component', ()=>{
     let AppWrapper,events
     beforeAll(()=>AppWrapper=shallow(<App events={events}/>))
@@ -23,15 +26,20 @@ describe('<App /> component', ()=>{
     })
 });
 
+
+/*intergration test*/
+
 describe('<App /> integration', () => {
   let AppWrapper;
   beforeAll(()=>AppWrapper=mount(<App />))
+
     test('App passes "events" state as a prop to EventList', () => {
       const AppEventsState = AppWrapper.state('events');
-      // expect(AppEventsState).not.toEqual(undefined);
+      expect(AppEventsState).not.toEqual(undefined);
       expect(AppWrapper.find(EventList).props().events).toEqual(AppEventsState);
       AppWrapper.unmount();
     });
+  });
 
     test('App passes "locations" state as a prop to CitySearch', () => {
         const AppLocationsState = AppWrapper.state('locations');

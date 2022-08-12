@@ -105,6 +105,3 @@ export const getEvents = async () => {
     return result.data.events;
   }
 };
-
-
-

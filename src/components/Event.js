@@ -13,16 +13,17 @@ class Event extends Component {
   
   render() {
      const {events}=this.props
+    
     return (
         <div>
           <h1 className='eventTitle' >{events.summary}</h1>
-          <p className='eventTimeCity' >{moment(events.start.dateTime).format('LLLL') + events.start.timeZone}</p>
+          <p className='eventTimeCity'>{moment(events.start.dateTime).format('LLLL') + events.start.timeZone}</p>
           <p>{`@${events.summary}|${events.location}`}</p>
-          {!this.state.showDetails? <button className='expandDetails' onClick={()=>this.setState({showDetails:true})}>Show details</button>:<div></div>}
+          {!this.state.showDetails? <button className='expandDetailsBtn' onClick={()=>this.setState({showDetails:true})}>Show details</button>:<div></div>}
           {this.state.showDetails?
           <div>
           <p>{events.description}</p>
-          <button className='collapseDetails' onClick={()=>this.setState({showDetails:false})}>Hide details</button>
+          <button className='collapseDetailsBtn' onClick={()=>this.setState({showDetails:false})}>Hide details</button>
           </div>
           :<p></p>  
         }

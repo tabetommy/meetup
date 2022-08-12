@@ -1,13 +1,13 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import NumberOfEvents from "../NumberOfEvents";
+import NumberOfEvents from "../components/NumberOfEvents";
 
 describe('< NumberOfEvents /> Component', ()=>{
     let NumberOfEventsWrapper, eventsNum
     beforeAll(()=>{
         NumberOfEventsWrapper= shallow(<NumberOfEvents 
         eventsNum={eventsNum}
-        updateEvents={() => { }}/>)
+        />)
     })
 
     test('render text input',()=>{
