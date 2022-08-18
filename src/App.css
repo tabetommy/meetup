@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 .App {
-  /* text-align: center; */
+  /*text-align: center; */
   padding: 2% 5%;
 }
 
@@ -39,6 +39,7 @@ input[type="number"] {
 
 .city {
   width: 250px;
+  margin-top: 20px;
 }
 
 .CitySearch {
@@ -57,7 +58,7 @@ input[type="number"] {
   z-index: 2;
   align-self: center;
   margin: 0;
-  top: 43px;
+  top: 58px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
@@ -130,9 +131,12 @@ input[type="number"] {
   font-family: sans-serif;
 }
 
-.Alert {
+.info-alert {
   position: fixed;
   top: 20px;
+  background-color: hsl(211, 47%, 75%);
+  border-radius: 10px;
+  padding: 5px 8px;
 }
 
 .data-vis-wrapper {
@@ -200,7 +204,9 @@ input[type="number"] {
   font-family: "Roboto";
 }
 
-
+.infoAlert{
+  margin-top: 100px;
+}
 
 
 @media only screen and (min-width: 992px) {

@@ -15,7 +15,7 @@ class NumberOfEvents extends Component {
     const value = event.target.value;
     // this.props.updateEvents(undefined,value);
     if(value<=0 || value>40){
-       this.setState({infoText:'number of events must be positive and not more than 40'});
+       this.setState({infoText:'invalid number'});
        this.props.updateEvents(undefined,value);
     }else{
       this.setState({infoText:''})
