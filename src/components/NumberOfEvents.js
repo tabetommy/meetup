@@ -8,6 +8,7 @@ class NumberOfEvents extends Component {
     super();
     this.state={
       infoText:'',
+      showAlert:false
     }
   }
 
@@ -15,10 +16,16 @@ class NumberOfEvents extends Component {
     const value = event.target.value;
     // this.props.updateEvents(undefined,value);
     if(value<=0 || value>40){
-       this.setState({infoText:'invalid number'});
+       this.setState({
+        showAlert:true,
+        infoText:'number must be positive and not more than 40' 
+      });
        this.props.updateEvents(undefined,value);
     }else{
-      this.setState({infoText:''})
+      this.setState({
+        showAlert:false,
+        infoText:''
+      })
       this.props.updateEvents(undefined,value);
     }
     
@@ -28,7 +35,9 @@ class NumberOfEvents extends Component {
     const {eventsCount}=this.props
     return (
         <form>
-          <ErrorAlert text={this.state.infoText}/>
+          <div style={{visibility:this.state.showAlert?'visible':'hidden'}} >
+            <ErrorAlert text={this.state.infoText}/>
+          </div>
           <label htmlFor="fname">Number of events:</label><br></br>
           <input
           type="number"
