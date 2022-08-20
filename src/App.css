@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 .App {
-  /* text-align: center; */
+  /*text-align: center; */
   padding: 2% 5%;
 }
 
@@ -39,6 +39,7 @@ input[type="number"] {
 
 .city {
   width: 250px;
+  margin-top: 10px;
 }
 
 .CitySearch {
@@ -57,7 +58,7 @@ input[type="number"] {
   z-index: 2;
   align-self: center;
   margin: 0;
-  top: 43px;
+  top: 100px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
@@ -76,6 +77,21 @@ input[type="number"] {
 
 .suggestions > li:hover {
   background-color: #bcdcdb;
+}
+
+.info-alert {
+  background-color: hsl(211, 66%, 90%);
+  border-radius: 10px;
+  padding: 5px 8px;
+  height: 50px;
+}
+
+.error-alert {
+  background-color: hsl(300, 76%, 94%);
+  border-radius: 10px;
+  padding: 5px 8px;
+  height: 50px;
+  max-width: 300px;
 }
 
 .event {
@@ -130,10 +146,7 @@ input[type="number"] {
   font-family: sans-serif;
 }
 
-.Alert {
-  position: fixed;
-  top: 20px;
-}
+
 
 .data-vis-wrapper {
   display: flex;
@@ -199,6 +212,7 @@ input[type="number"] {
   letter-spacing: 0.2px;
   font-family: "Roboto";
 }
+
 
 
 
