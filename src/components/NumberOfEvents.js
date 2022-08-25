@@ -14,11 +14,10 @@ class NumberOfEvents extends Component {
 
   handleInputChange = (event) => {
     const value = event.target.value;
-    // this.props.updateEvents(undefined,value);
     if(value<=0 || value>40){
        this.setState({
         showAlert:true,
-        infoText:'number must be positive and not more than 40' 
+        infoText:'number must be between 1 and 40' 
       });
        this.props.updateEvents(undefined,value);
     }else{

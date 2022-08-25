@@ -44,9 +44,10 @@ class CitySearch extends Component {
             showAlert:false,
             infoText:''
         });
+        // this.props.getQueryState(suggestion)
         this.props.updateEvents(suggestion);
         }
-
+  
   render() {
     return (
       <div className="CitySearch">
