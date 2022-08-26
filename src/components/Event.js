@@ -22,8 +22,15 @@ class Event extends Component {
           {!this.state.showDetails? <button className='expandDetailsBtn' onClick={()=>this.setState({showDetails:true})}>Show details</button>:<div></div>}
           {this.state.showDetails?
           <div>
-          <div className='eventDetails'>{events.description}</div>
-          <button className='collapseDetailsBtn' onClick={()=>this.setState({showDetails:false})}>Hide details</button>
+            <h3>About event:</h3>
+            <a
+              href={events.htmlLink}
+              target="_blank" rel="noreferrer"
+            >
+                See details on Google calendar
+            </a>
+            <div className='eventDetails'>{events.description}</div>
+            <button className='collapseDetailsBtn' onClick={()=>this.setState({showDetails:false})}>Hide details</button>
           </div>
           :<p></p>  
         }

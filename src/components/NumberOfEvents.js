@@ -19,13 +19,13 @@ class NumberOfEvents extends Component {
         showAlert:true,
         infoText:'number must be between 1 and 40' 
       });
-       this.props.updateEvents(undefined,value);
+       this.props.updateEvents('city',value);
     }else{
       this.setState({
         showAlert:false,
         infoText:''
       })
-      this.props.updateEvents(undefined,value);
+      this.props.updateEvents('city',value);
     }
     
   }

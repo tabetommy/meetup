@@ -16,6 +16,7 @@ class App extends Component {
     this.state = {
         events: [],
         locations:[],
+        selectedCity:'',
         eventsCount:25
         
     }
@@ -32,11 +33,10 @@ class App extends Component {
       });
     }
 
-    // //get value of query state in CitySearch component
-    // getQueryState=(suggestion)=>{
-    //   const value=suggestion;
-    //   return value
-    // }
+    //get value of query state in CitySearch component
+     getQueryState=(suggestion)=>{
+      this.setState({selectedCity:suggestion});
+    }
     
     //update events based on selected events
     updateEvents = (location,eventCount) => {
@@ -45,12 +45,9 @@ class App extends Component {
       }else{
         this.setState({eventsCount:eventCount})
       }
-      // if (location==='city'){
-      //   location=this.getQueryState()
-      //   console.log(location)
-        
-      // }
-      //equate loaction 'city to query state from city search
+      if(location==='city'){
+        location=this.state.selectedCity
+      }
       getEvents().then((events) => {
         const locationEvents = (location === 'all' || location === undefined) ?
           events :
@@ -80,7 +77,7 @@ class App extends Component {
       <div className="App">
         <CitySearch 
         locations={this.state.locations}
-        // getQueryState={this.getQueryState}
+        getQueryState={this.getQueryState}
         updateEvents={this.updateEvents}
         />
         <NumberOfEvents 
