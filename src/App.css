@@ -36,6 +36,7 @@ input[type="number"] {
   line-height: 20px;
   align-self: center;
   height: 38px;
+  box-shadow: 0px 1px 10px 0 rgb(0 0 0 / 15%);
 }
 
 
@@ -55,6 +56,7 @@ input[type="number"] {
 }
 
 .suggestions {
+  background-color: hsl(180, 20%, 99%);
   width: 250px;
   position: absolute;
   z-index: 2;
@@ -103,7 +105,7 @@ input[type="number"] {
   padding: 10px 10px 35px;
   margin-bottom: 20px;
   text-align: left;
-  box-shadow: 0px 1px 10px 0 rgb(0 0 0 / 15%);
+  box-shadow: 0px 1px 5px 5px rgb(0 0 0 / 15%);
   border-radius: 4px;
   position: relative;
 }
@@ -221,7 +223,6 @@ input[type="number"] {
   background-color: transparent;
   font-size: 14px;
   letter-spacing: 0.2px;
-  /* font-family: "Roboto"; */
   border: 1px solid rgb(179, 171, 171);
   cursor: pointer;
 }

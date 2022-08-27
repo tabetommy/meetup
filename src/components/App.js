@@ -75,7 +75,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Meetup App</h1>
         <CitySearch 
         locations={this.state.locations}
         getQueryState={this.getQueryState}
