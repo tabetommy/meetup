@@ -12,7 +12,7 @@ class EventList extends Component {
 
   componentDidMount(){
     if(!navigator.onLine){
-      this.setState({infoText:'The App is currently offline; the events are being loaded from cache,hence they are not up to date'})
+      this.setState({infoText:'The events are not up to date because you are offline. Go online to get updated events'})
     }else{
       this.setState({infoText:''})
     }

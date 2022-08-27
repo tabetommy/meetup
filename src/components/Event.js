@@ -16,8 +16,8 @@ class Event extends Component {
     
     return (
         <div className='event'>
-          <h1 className='eventTitle' >{events.summary}</h1>
-          <p className='eventTimeCity'>{moment(events.start.dateTime).format('LLLL') + events.start.timeZone}</p>
+          <h2 className='eventTitle' >{events.summary}</h2>
+          <p className='eventTimeCity'>{moment(events.start.dateTime).format('LLLL') + ' ' + events.start.timeZone + ' time zone'}</p>
           <p>{`@${events.summary}|${events.location}`}</p>
           {!this.state.showDetails? <button className='expandDetailsBtn' onClick={()=>this.setState({showDetails:true})}>Show details</button>:<div></div>}
           {this.state.showDetails?
