@@ -4,6 +4,8 @@
 
 A serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique. The application uses the Google Calendar API to fetch upcoming events.
 
+![screenshot](./screenshot.JPG)
+
 ## About the project meetup(features, user stories and scenarios)
 
 ### FEATURE 1: FILTER EVENTS BY CITY
@@ -63,51 +65,34 @@ GIVEN the user is on the app, WHEN he navigates to the page containing the chart
 
 ### USER STORY: As a user, I would like to be able to add the app shortcut to my home screen so that I can open the app faster.
 
-## Available Scripts
+## Built With
 
-In the project directory, you can run:
+- HTML,CSS & React
+- Amazon web service Lambda functions, google calendar API
+- Libraries(Jest, Enzyme, Cumcuber, Puppeteer,Recharts)
 
-### `npm start`
+## Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Live Demo Link](https://tabetommy.github.io/meetup/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Lessons learned
 
-### `npm test`
+- I learnt about serverless functions and implemented one with Amazon web service to generate tokens to fetch data from google calendar API
+- I also learnt about a test driven approach to developement and implemented Unit, Intergrated, User Acceptance and End-to-End testing
+- I learnt and successively converted the app to a progresive web app by implementing a service worker and configuring the JSON manifest file.
+- Finally, i used a Rechart Js to plot charts.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+👤 **Author1**
 
-### `npm run build`
+- Github: [@githubhandle](https://github.com/tabetommy)
+- Linkedin: [linkedin](https://www.linkedin.com/in/tommy-egbe-304464116/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🤝 Contributing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Contributions, issues and feature requests are welcome!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Feel free to check the [issues page](issues/).
 
-### `npm run eject`
+## Show your support
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Give a ⭐️ if you like this project!

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {InfoAlert} from '../Alert'
+import {InfoAlert} from '../Alert';
+import '../styles/citysearch.css';
 
 class CitySearch extends Component {
     constructor() {
@@ -44,9 +45,10 @@ class CitySearch extends Component {
             showAlert:false,
             infoText:''
         });
+        this.props.getQueryState(suggestion)
         this.props.updateEvents(suggestion);
         }
-
+  
   render() {
     return (
       <div className="CitySearch">
@@ -56,6 +58,7 @@ class CitySearch extends Component {
         <input
         type="text"
         className="city"
+        placeholder=" Search for a city "
         value={this.state.query}
         onChange={this.handleInputChanged}
         onFocus={() => { this.setState({ showSuggestions: true }) }}
