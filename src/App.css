@@ -1,8 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
+*{
+  color: white;
+}
 .App {
   font-family: 'Judson', serif;
   text-align: center;
   padding: 2% 5%;
+  background-color: #1d1d1d ;
   
 }
 
@@ -65,6 +69,7 @@ input[type="number"] {
   top: 110px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
+  
 }
 
 .suggestions > li {
@@ -72,11 +77,17 @@ input[type="number"] {
   padding: 8px 6px 8px 10px;
   background-color: #eee;
   cursor: default;
+  color: black;
+  font-weight: 600;
 }
 
 .suggestions > li:last-child {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
+}
+
+b{
+  color:black;
 }
 
 .suggestions > li:hover {
@@ -147,6 +158,7 @@ input[type="number"] {
   width: 200px;
   margin: 20px auto 40px auto;
   text-align: center;
+  color: black;
 }
 
 .button-wrapper {
